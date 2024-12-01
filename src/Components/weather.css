@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f4f8;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #87cefa,
+    #00bfff
+  ); /* Sky blue gradient */
+  /* font-family: "Arial", sans-serif; */
+}
+
+/* Weather Report Box */
+.weather-report {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 20px;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+  /* text-align: center; */
+}
+
+/* Weather Card */
+.weather-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  padding-top: 20px;
+}
+
+/* Weather Information Section */
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.weather-info p {
+  width: 100%;
+  margin: 10px 0;
+  font-style: Helvetica;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.weather-info hr {
+  align-self: flex-start;
+  margin: 10px 0;
+  width: 50%;
+  border: 0;
+  height: 0.5px;
+  background-color: #ccc;
+}
+
+/* Title Style */
+h2 {
+  color: #333;
+  font-family: Helvetica;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Input Field Styling */
+input[type="text"] {
+  padding: 12px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Weather Report Styling */
+.weather-report h2 {
+  color: #007bff;
+  font-size: 24px;
+}
+
+.weather-report p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.weather-report span {
+  font-weight: bold;
+}
+
+/* Weather Icon Styling */
+.weather-icon {
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Additional styles for icon color depending on condition */
+.icon-clear {
+  color: #ffdd00;
+} /* Sunny - yellow */
+.icon-clouds {
+  color: #bdc3c7;
+} /* Cloudy - grey */
+.icon-rain {
+  color: #3498db;
+} /* Rain - blue */
+.icon-snow {
+  color: #ffffff;
+} /* Snow - white */
+.icon-haze {
+  color: #3498db;
+} /* Haze - orange */
+.icon-thunderstorm {
+  color: #3498db;
+} /* Thunderstorm - red */
+.icon-drizzle {
+  color: #1f8a70;
+} /* Drizzle - teal */
+
+.weather-icon:hover {
+  transform: scale(1.2); /* Enlarges icon on hover */
+}
+
+/* Error Message Styling */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .weather-container {
+    padding: 10px;
+  }
+
+  .weather-report {
+    width: 100%;
+  }
+
+  .weather-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  input[type="text"] {
+    width: 200px;
+  }
+
+  button {
+    padding: 10px 15px;
+  }
+}
