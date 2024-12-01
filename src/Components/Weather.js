@@ -64,7 +64,7 @@ function Weather() {
                 throw new Error("Failed to fetch weather data for your location");
             }
             const data = await response.json();
-            setWeather(data);  // Set the weather data
+            setWeather(data);  
         } catch (error) {
             setError("Unable to fetch weather by location");
             console.error("Error fetching weather by location:", error);
