@@ -42,7 +42,7 @@ function Weather() {
 
     const handleClick = async (e) => {
         e.preventDefault();
-        setError("");  // Clear previous errors
+        setError("");  
         setWeather(null);  // Clear previous weather data
         try {
             const response = await fetch(`http://localhost:5000/api/weather?city=${city}`);
